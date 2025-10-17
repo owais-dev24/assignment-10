@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mart Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">ElectroMart</a>
+      <nav class="links" id="navMenu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="page/products.html">Products</a></li>
+          <li><a href="page/about.html">About</a></li>
+          <li><a href="page/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Discover the Future of Electronics</h1>
+        <p>Shop the latest smartphones, laptops, and gadgets with unbeatable prices and fast delivery.</p>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> TechTarrmart | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Responsive Navbar
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+    });
+
+    // Dynamic Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
